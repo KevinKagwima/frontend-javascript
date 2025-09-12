@@ -41,4 +41,4 @@ studentsList.forEach((student) => {
 });
 
 header.append(headerRow);
-header.append(body);
+header.appendChild(body);
