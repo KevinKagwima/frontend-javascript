@@ -1,8 +1,8 @@
 interface Student {
-  firstName: String;
-  lastName: String;
+  firstName: string;
+  lastName: string;
   age: Number;
-  location: String;
+  location: string;
 }
 
 const studentOne: Student = {
