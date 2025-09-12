@@ -12,12 +12,9 @@ interface Director extends Teacher {
 }
 
 interface printTeacherFunction {
-  (firstName: string, lastName: string): string;
+  (input: { firstName: string; lastName: string }): string;
 }
 
-const printTeacher: printTeacherFunction = function printTeacher(
-  firstName: string,
-  lastName: string
-): string {
-  return `${firstName.charAt(0)}. ${lastName}`;
-};
+function printTeacher(input: { firstName: string; lastName: string }): string {
+  return `${input.firstName.charAt(0)}. ${input.lastName}`;
+}
