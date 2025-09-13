@@ -1,12 +1,16 @@
-interface DirectorInteface {
+interface DirectorInterface {
   workFromHome(): string;
   getCoffeeBreak(): string;
   workDirectorTasks(): string;
 }
 
-interface TeacherInterface extends DirectorInteface {}
+interface TeacherInterface {
+  workFromHome(): string;
+  getCoffeeBreak(): string;
+  workTeacherTasks(): string;
+}
 
-class Director implements DirectorInteface {
+class Director implements DirectorInterface {
   workFromHome(): string {
     return "Working from home";
   }
@@ -29,14 +33,15 @@ class Teacher implements TeacherInterface {
     return "Cannot have a break";
   }
 
-  workDirectorTasks(): string {
+  workTeacherTasks(): string {
     return "Getting to work";
   }
 }
 
 function createEmployee(salary: number): object {
   if (salary < 500) {
-    return Teacher;
+    return new Teacher();
+  } else {
+    return new Director();
   }
-  return Director;
 }
