@@ -1,11 +1,7 @@
-const cpp = new Subjects.Cpp();
-const java = new Subjects.Java();
-const react = new Subjects.React();
-const cTeacher: Subjects.Teacher = {
-  firstName: "Bobby",
-  lastName: "Wine",
-  experienceTeachingC: 10,
-};
+const cpp = new Cpp();
+const java = new Java();
+const react = new React();
+const cTeacher: Teacher;
 
 java.setTeacher(cTeacher);
 
