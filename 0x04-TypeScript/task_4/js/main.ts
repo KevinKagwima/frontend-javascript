@@ -1,7 +1,11 @@
 const cpp = new Cpp();
 const java = new Java();
 const react = new React();
-const cTeacher: Teacher;
+const cTeacher: Teacher = {
+  firstName: "Bobby",
+  lastName: "Wine",
+  experienceTeachingC: 10,
+};
 
 java.setTeacher(cTeacher);
 
