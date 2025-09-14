@@ -46,7 +46,7 @@ function createEmployee(salary: number): Director | Teacher {
   }
 }
 
-export function isDirector(employee): boolean {
+export function isDirector(employee: Teacher | Director): boolean {
   return employee instanceof Director;
 }
 
@@ -55,5 +55,15 @@ function executeWork(employee: Teacher | Director): string {
     return employee.workDirectorTasks();
   } else if (employee instanceof Teacher) {
     return employee.workTeacherTasks();
+  }
+}
+
+type Subjects = "Math" | "History";
+
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === "Math") {
+    return "Teaching Math";
+  } else if (todayClass === "History") {
+    return "Teaching History";
   }
 }
