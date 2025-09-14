@@ -1,11 +1,13 @@
-export const cpp = new Subjects.Cpp();
-export const java = new Subjects.Java();
-export const react = new Subjects.React();
-export const cTeacher: Subjects.Teacher = {
+const cpp = new Subjects.Cpp();
+const java = new Subjects.Java();
+const react = new Subjects.React();
+const cTeacher: Subjects.Teacher = {
   firstName: "Bobby",
   lastName: "Wine",
   experienceTeachingC: 10,
 };
+
+java.setTeacher(cTeacher);
 
 console.log("C++");
 cpp.setTeacher = cTeacher;
